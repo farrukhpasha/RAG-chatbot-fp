@@ -1,0 +1,50 @@
+2025-03-20 09:43:33,460 [INFO] ✅ Loaded 333 paragraphs from All_leaves.txt
+2025-03-20 09:43:33,460 [INFO] Generating embeddings for dataset...
+2025-03-20 09:43:50,990 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-03-20 09:43:51,101 [INFO] ✅ Added 333 paragraphs to database.
+2025-03-20 09:43:51,119 [INFO] ✅ FAISS index built successfully.
+2025-03-20 09:43:58,658 [INFO] 📥 Received query: I am a software designer and wants to know my leaves
+2025-03-20 09:43:58,692 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-03-20 09:43:58,720 [WARNING] ⚠️ No relevant context found for query.
+2025-03-20 09:45:35,486 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-20 09:45:58,968 [INFO] ✅ Response generated successfully.
+2025-03-20 09:45:59,212 [INFO] 📤 Sending response: Unfortunately, I need more context about your specific situation. Can you please provide me with the following details:<br><br>1. What type of leave are you inquiring about (vacation, sick, personal, etc.)?<br>2. How many days or weeks do you have accrued or would like to take off?<br>3. Do you have any upcoming deadlines or projects that may impact your leave?<br><br>Once I have this information, I'll be happy to assist you with your leave policy!
+2025-03-20 10:08:25,717 [INFO] 📥 Received query: I am a software designer and wants to know what leaves I can take
+2025-03-20 10:08:31,017 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-03-20 10:08:31,167 [WARNING] ⚠️ No relevant context found for query.
+2025-03-20 10:09:00,587 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-20 10:09:37,800 [INFO] ✅ Response generated successfully.
+2025-03-20 10:09:37,819 [INFO] 📤 Sending response: As a software designer, you may be eligible for various types of leave policies depending on your location, employer, and specific job requirements. Here are some common leave options:<br><br>1. **Annual Leave**: A fixed number of days off per year, which can be used for vacation, personal reasons, or sick leave.<br>2. **Sick Leave**: Time off due to illness or injury, usually without pay or with partial pay.<br>3. **Family and Medical Leave Act (FMLA)**: Eligible employees may take up to 12 weeks of unpaid leave for certain family and medical reasons.<br>4. **Paternity Leave**: Paid time off for new parents, which varies by country and employer.<br>5. **Parental Leave**: Time off for caring for a newborn or adopted child, similar to paternity leave.<br>6. **Maternity Leave**: Time off for childbirth and postpartum care, also varying by country and employer.<br>7. **Personal Days**: Additional paid days off for personal reasons, such as illness, appointments, or family events.<br><br>Please note that these are general examples, and specific leave policies may vary depending on your location, employer, or industry.<br><br>Which type of leave are you interested in learning more about?
+2025-03-20 11:18:33,054 [INFO] 📥 Received query: tell about Sick leave
+2025-03-20 11:18:37,507 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-03-20 11:18:38,288 [WARNING] ⚠️ No relevant context found for query.
+2025-03-20 11:19:53,437 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-20 11:20:36,604 [INFO] ✅ Response generated successfully.
+2025-03-20 11:20:36,621 [INFO] 📤 Sending response: Sick Leave is a type of leave policy that allows employees to take time off from work when they are unable to perform their job duties due to illness, injury, or medical treatment.<br><br>Here are some key aspects of Sick Leave policies:<br><br>**Purpose:** The primary purpose of Sick Leave is to provide employees with time to recover from illness, receive medical treatment, and prevent the spread of illness in the workplace.<br><br>**Types:**<br><br>1. **Paid Sick Leave**: Employees receive pay for the days they miss work due to illness.<br>2. **Unpaid Sick Leave**: Employees do not receive pay while taking sick leave.<br>3. **Shared Sick Leave**: Employers and employees share a pool of sick leave days, with each employee receiving a set number of days.<br><br>**Eligibility:** Typically, all full-time and part-time employees are eligible for Sick Leave, although some employers may have specific requirements or restrictions.<br><br>**Duration:** The duration of Sick Leave varies by employer and country, but it's usually up to 5-10 days per year, depending on the jurisdiction.<br><br>**Notification:** Employees are often required to notify their employer in advance before taking sick leave, providing a doctor's note or medical certificate when possible.<br><br>**Carryover and Accrual:** Sick Leave may accrue over time, with employees carrying over unused days at the end of each year.<br><br>**Return to Work:** Once an employee has recovered from illness, they typically need to provide a doctor's note or proof of recovery before returning to work.<br><br>Sick Leave policies can vary significantly across different countries and companies. It's essential for employers to establish clear guidelines and communicate them to employees to ensure fairness and compliance with relevant laws and regulations.
+2025-03-20 11:22:01,687 [INFO] 📥 Received query: how many maternity leave can i take as a male employee
+2025-03-20 11:22:02,922 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-03-20 11:22:03,152 [WARNING] ⚠️ No relevant context found for query.
+2025-03-20 11:22:46,977 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-20 11:22:58,415 [INFO] ✅ Response generated successfully.
+2025-03-20 11:22:58,454 [INFO] 📤 Sending response: I don't have specific information on the number of maternity leaves that male employees are entitled to, as my training data is focused solely on general leave policies and does not provide details on parental leave specifics for non-biological parents. If you're looking for accurate information on this topic, I recommend consulting your company's HR department or employee handbook directly.
+2025-03-20 11:23:28,338 [INFO] 📥 Received query: can you tell me about parental leaves?
+2025-03-20 11:23:28,621 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-03-20 11:23:28,689 [WARNING] ⚠️ No relevant context found for query.
+2025-03-20 11:23:31,590 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-20 11:24:15,596 [INFO] ✅ Response generated successfully.
+2025-03-20 11:24:15,598 [INFO] 📤 Sending response: Parental leave policies can vary widely depending on the country, company, or culture.<br><br>In general, parental leave is a type of leave that allows employees to care for their newborns, adopted children, or dependent family members after the birth or adoption. The purpose of parental leave is to support new parents in balancing work and family responsibilities while also ensuring that they can be present for their child's early years.<br><br>Some common types of parental leaves include:<br><br>1. **Maternity Leave**: A type of leave specifically designed for mothers, typically providing time off before or after childbirth.<br>2. **Paternity Leave**: A leave policy that allows fathers to care for their newborns and bond with them during the first few months.<br>3. **Family Leave**: An umbrella term that encompasses parental leaves, as well as other types of leaves for caring family members.<br><br>The duration and terms of parental leaves can vary significantly:<br><br>* **Short-term leaves** (e.g., 2-4 weeks) are common in some industries or countries, providing a brief respite for new parents.<br>* **Long-term leaves** (e.g., several months or even years) offer more extensive support, allowing parents to fully engage with their newborns.<br><br>Parental leave policies can be influenced by factors such as:<br><br>* **Company culture**: Some companies prioritize work-life balance and offer generous parental leave policies to attract and retain top talent.<br>* **Government regulations**: Governments may set minimum standards for paid parental leave in certain countries or regions.<br>* **Industry norms**: Certain industries, like healthcare or education, might have more extensive parental leave policies due to the demands of their roles.<br><br>Keep in mind that these are general explanations, and specific details about parental leaves can vary greatly depending on the context.
+2025-03-20 13:40:59,238 [INFO] ✅ Loaded 333 paragraphs from All_leaves.txt
+2025-03-20 13:40:59,240 [INFO] Generating embeddings for dataset...
+2025-03-20 13:41:41,790 [INFO] ✅ Loaded 333 paragraphs from All_leaves.txt
+2025-03-20 13:41:41,805 [INFO] Generating embeddings for dataset...
+2025-03-20 13:42:00,247 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-03-20 13:42:01,247 [INFO] ✅ Added 333 paragraphs to database.
+2025-03-20 13:42:01,267 [INFO] ✅ FAISS index built successfully.
+2025-03-20 13:44:41,214 [INFO] ✅ Loaded 333 paragraphs from All_leaves.txt
+2025-03-20 13:44:56,856 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-03-20 13:45:19,229 [INFO] ✅ Loaded 333 paragraphs from All_leaves.txt
+2025-03-20 13:45:36,223 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-03-20 13:47:57,824 [INFO] ✅ Loaded 333 paragraphs from All_leaves.txt
+2025-03-20 13:48:15,860 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"
+2025-03-20 13:48:16,077 [INFO] ✅ Loaded 333 paragraphs from All_leaves.txt
+2025-03-20 13:48:35,473 [INFO] HTTP Request: POST http://127.0.0.1:11434/api/embed "HTTP/1.1 200 OK"

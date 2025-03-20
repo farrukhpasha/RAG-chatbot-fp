@@ -8,3 +8,23 @@ Required Python Libraries/Models
 
 
 pip install --upgrade -r requirements.txt
+pip download -r requirements.txt -d packages/
+
+Test_feedback.py:
+============
+Have a feedback loop. Lean from Json is not working. Need to fix. 
+
+
+Test_rest.py:
+============
+Copy of Test_feedback.py:
+Server run: uvicorn Test_rest:app --host 0.0.0.0 --port 8000 --reload 
+uvicorn Test_rest:app --host 0.0.0.0 --port 8000 --reload --log-level info
+
+
+Test_rest_session.py:
+============
+Copy of Test_feedback.py:
+Server run: uvicorn Test_rest:app --host 0.0.0.0 --port 8000 --reload 
+uvicorn Test_rest_session:app --host 0.0.0.0 --port 8000 --reload --log-level info
++ Session Management
