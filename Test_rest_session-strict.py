@@ -1,5 +1,5 @@
 # =======================================================================
-#        85% confidence, Testing feedback, role maintained, no code [Working]
+#        85% confidence, Testing feedback, role maintained, strict referencing]
 # =======================================================================
 # Copied from Test_feedback.py #
 
@@ -234,7 +234,12 @@ def startup():
     dataset = load_dataset("All_leaves.txt")
     if dataset:
         add_paragraphs_to_database(dataset)
-        build_faiss_index()
+        build_faiss_index()        
+
+def add_default_admin_session():
+    session_id="admin123-session-01"
+    sessions[session_id] = {"history": []}
+    logger.info(f"Default_admin_Session created.")
 
 def load_dataset(file_path):
     try:
@@ -276,6 +281,7 @@ def build_faiss_index():
         logger.error(f"❌ Error building FAISS index: {e}")
 
 def retrieve(query, top_n=3):
+    # function with Hard context
     global faiss_index
     if faiss_index is None:
         return []
@@ -290,15 +296,34 @@ def retrieve(query, top_n=3):
     except Exception as e:
         logger.error(f"❌ Error retrieving data: {e}")
         return []
+    
+# def retrieve(query, top_n=3):
+#     # function with Hard context
+#     global faiss_index
+#     if faiss_index is None:
+#         return []
+
+#     try:
+#         response = ollama.embed(model=EMBEDDING_MODEL, input=query)
+#         query_embedding = np.array(response['embeddings'][0]).astype('float32').reshape(1, -1)
+#         distances, indices = faiss_index.search(query_embedding, top_n)
+
+#         results = [(VECTOR_DB[idx][0], 1 - distance) for idx, distance in zip(indices[0], distances[0]) if (1 - distance) >= THRESHOLD_CUTOFF]
+#         return results if results else []
+#     except Exception as e:
+#         logger.error(f"❌ Error retrieving data: {e}")
+#         return []
 
 def chatbot_interaction(session_id, user_input):
     retrieved_knowledge = retrieve(user_input)
     if not retrieved_knowledge:
         return "No relevant context found."
 
+    
     context = '\n'.join([f" - {chunk}" for chunk, _ in retrieved_knowledge])
+    logger.info("🏠 Context: {context}")
     messages = sessions[session_id]["history"] + [
-        {'role': 'system', 'content': "You are an intelligent chatbot specializing in leave policies.\n" + "Relevant context:\n" + context},
+        {'role': 'system', 'content': "You are an intelligent chatbot specializing in leave policies. Only answer based on the provided context.\nRelevant context:\n" + context},
         {'role': 'user', 'content': f"```{user_input}```"},
     ]
 
@@ -342,11 +367,6 @@ def submit_feedback(request: FeedbackRequest):
     save_feedback(request.user_input, request.response, request.feedback, request.correction)
     return {"message": "Feedback submitted successfully"}
 
-@app.post("/feedback")
-def submit_feedback(request: FeedbackRequest):
-    save_feedback(request.user_input, request.response, request.feedback, request.correction)
-    return {"message": "Feedback submitted successfully"}
-
 # Load dataset and build FAISS index on startup
 @app.on_event("startup")
 def startup():
@@ -354,5 +374,5 @@ def startup():
     if dataset:
         add_paragraphs_to_database(dataset)
         build_faiss_index()
-    start_session()
+    add_default_admin_session()
 

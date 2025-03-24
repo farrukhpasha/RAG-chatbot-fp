@@ -28,3 +28,9 @@ Copy of Test_feedback.py:
 Server run: uvicorn Test_rest:app --host 0.0.0.0 --port 8000 --reload 
 uvicorn Test_rest_session:app --host 0.0.0.0 --port 8000 --reload --log-level info
 + Session Management
+
+Test_rest_session-strict.py:
+============
+Copy of Test_feedback.py:
+uvicorn Test_rest_session-strict:app --host 0.0.0.0 --port 8000 --reload --log-level info
++ Session Management
