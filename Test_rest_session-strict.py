@@ -323,7 +323,7 @@ def chatbot_interaction(session_id, user_input):
     context = '\n'.join([f" - {chunk}" for chunk, _ in retrieved_knowledge])
     logger.info("🏠 Context: {context}")
     messages = sessions[session_id]["history"] + [
-        {'role': 'system', 'content': "You are an intelligent chatbot specializing in leave policies. Only answer based on the provided context.\nRelevant context:\n" + context},
+        {'role': 'system', 'content': "You are an intelligent chatbot specializing in leave policies for Aga Khan University Hospital. Only answer based on the provided relevant context.\nRelevant context:\n" + context},
         {'role': 'user', 'content': f"```{user_input}```"},
     ]
 
